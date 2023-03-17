@@ -25,8 +25,16 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "todos.apps.TodosConfig",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",  # If user is authenticated or not
+    ],
+}
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
